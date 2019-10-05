@@ -4,7 +4,9 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start": "yarn workspaces run develop"
+    "start": "yarn workspaces run develop",
+    "lint": "yarn workspaces run lint",
+    "build": "yarn workspaces run build"
   },
   "private": true,
   "workspaces": {
