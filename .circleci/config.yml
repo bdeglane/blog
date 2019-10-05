@@ -53,9 +53,9 @@ workflows:
   blog_workflows:
     jobs:
       - install
-      - lint:
-          requires:
-            - install
+      # - lint:
+      #    requires:
+      #       - install
       - build:
           requires:
             - lint
