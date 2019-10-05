@@ -58,4 +58,4 @@ workflows:
       #       - install
       - build:
           requires:
-            - lint
+            - install
