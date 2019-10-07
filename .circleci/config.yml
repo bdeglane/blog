@@ -48,14 +48,63 @@ jobs:
           key: yarn-packages-{{ checksum "yarn.lock" }}
       - run: yarn build
 
+  deploy:
+    executor: node_exec
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - yarn-packages-{{ checksum "yarn.lock" }}
+      - run: yarn install --frozen-lockfile
+      - save_cache:
+          paths:
+            - ~/.cache/yarn
+          key: yarn-packages-{{ checksum "yarn.lock" }}
+      - run: yarn build:ci
+      - add_ssh_keys:
+          fingerprints:
+            - "3f:5c:92:a3:bd:69:7d:59:02:3e:d5:52:7a:39:f9:8f"
+      - run:
+          command: |
+            sudo npm install -g gh-pages
+            git config user.email "ci-build@blog.net"
+            git config user.name "ci-build"
+      - run:
+          command: |
+            git add packages/front/gatsby-blog
+            git commit -m "Release based on build ${CIRCLE_BUILD_NUM}"
+            git subtree push --prefix packages/front/gatsby-blog origin gh-pages --force
+      - run: sudo gh-pages -m "Page release ${CIRCLE_BUILD_NUM} from ${CIRCLE_BRANCH}" -d packages/front/public
+
 workflows:
   version: 2
   blog_workflows:
     jobs:
-      - install
+      - install:
       # - lint:
       #    requires:
       #       - install
+          filters:
+            branches:
+              ignore:
+                - gh-pages
       - build:
           requires:
             - install
+          filters:
+            branches:
+              ignore:
+                - gh-pages
+      - deploy:
+          filters:
+            branches:
+              only:
+                - master
+              ignore:
+                - gh-pages
+          requires:
+            - install
+            - build
+            # - test
+            # - lint
+            # - stylelint

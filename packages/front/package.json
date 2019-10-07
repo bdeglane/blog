@@ -27,6 +27,8 @@
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
+    "build:ci": "gatsby build --prefix-paths",
+    "postbuild:ci": "mv public gatsby-blog",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "start": "npm run develop",

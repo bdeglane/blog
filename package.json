@@ -6,7 +6,8 @@
   "scripts": {
     "start": "yarn workspaces run develop",
     "lint": "yarn workspaces run lint",
-    "build": "yarn workspaces run build"
+    "build": "yarn workspaces run build",
+    "build:ci": "yarn workspaces run build:ci"
   },
   "private": true,
   "workspaces": {
