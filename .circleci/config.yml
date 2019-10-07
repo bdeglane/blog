@@ -99,7 +99,7 @@ workflows:
           filters:
             branches:
               only:
-                - feat/9/deploy
+                - master
               ignore:
                 - gh-pages
           requires:
