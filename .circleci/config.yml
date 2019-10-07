@@ -87,7 +87,7 @@ workflows:
           filters:
             branches:
               only:
-                - feat/7/fix-ci
+                - feat/9/deploy
               ignore:
                 - gh-pages
           requires:
