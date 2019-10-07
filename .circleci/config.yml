@@ -62,7 +62,7 @@ jobs:
           key: yarn-packages-{{ checksum "yarn.lock" }}
       - run:
           command: |
-            npm install -g gh-pages
+            sudo npm install -g gh-pages
             git config user.email "ci-build@blog.net"
             git config user.name "ci-build"
       - run: yarn build
