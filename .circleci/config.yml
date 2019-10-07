@@ -56,11 +56,15 @@ jobs:
           keys:
             - yarn-packages-{{ checksum "yarn.lock" }}
       - run: yarn install --frozen-lockfile
-      - run: yarn global add gh-pages
       - save_cache:
           paths:
             - ~/.cache/yarn
           key: yarn-packages-{{ checksum "yarn.lock" }}
+      - run:
+        command: |
+          npm install -g gh-pages
+          git config user.email "ci-build@blog.net"
+          git config user.name "ci-build"
       - run: yarn build
       - run: gh-pages -d packages/front/public
 
