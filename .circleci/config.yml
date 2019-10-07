@@ -48,6 +48,22 @@ jobs:
           key: yarn-packages-{{ checksum "yarn.lock" }}
       - run: yarn build
 
+  deploy:
+    executor: node_exec
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - yarn-packages-{{ checksum "yarn.lock" }}
+      - run: yarn install --frozen-lockfile
+      - run: yarn global add gh-pages
+      - save_cache:
+          paths:
+            - ~/.cache/yarn
+          key: yarn-packages-{{ checksum "yarn.lock" }}
+      - run: yarn build
+      - run: gh-pages -d packages/front/public
+
 workflows:
   version: 2
   blog_workflows:
@@ -59,3 +75,14 @@ workflows:
       - build:
           requires:
             - install
+      - deploy:
+          filters:
+            branches:
+              only:
+                - feat/7/fix-ci
+          requires:
+            - install
+            - build
+            # - test
+            # - lint
+            # - stylelint
