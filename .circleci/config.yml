@@ -72,14 +72,22 @@ workflows:
       # - lint:
       #    requires:
       #       - install
+          branches:
+            ignore:
+              - gh-pages
       - build:
           requires:
             - install
+          branches:
+            ignore:
+              - gh-pages
       - deploy:
           filters:
             branches:
               only:
                 - feat/7/fix-ci
+              ignore:
+                - gh-pages
           requires:
             - install
             - build
