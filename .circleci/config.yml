@@ -73,7 +73,7 @@ jobs:
           command: |
             git add packages/front/gatsby-blog
             git commit -m "Release based on build ${CIRCLE_BUILD_NUM}"
-            git subtree push --prefix packages/front/gatsby-blog origin gh-pages
+            git subtree push --prefix packages/front/gatsby-blog origin gh-pages --force
       - run: sudo gh-pages -m "Page release ${CIRCLE_BUILD_NUM} from ${CIRCLE_BRANCH}" -d packages/front/public
 
 workflows:
