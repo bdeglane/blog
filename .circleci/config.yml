@@ -68,7 +68,7 @@ workflows:
   version: 2
   blog_workflows:
     jobs:
-      - install
+      - install:
       # - lint:
       #    requires:
       #       - install
