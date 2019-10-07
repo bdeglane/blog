@@ -101,7 +101,7 @@ workflows:
           filters:
             branches:
               only:
-                - master
+                - feat/11/fix-deploy
               ignore:
                 - gh-pages
           requires:
