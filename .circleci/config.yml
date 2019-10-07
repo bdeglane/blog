@@ -66,14 +66,13 @@ jobs:
             - "3f:5c:92:a3:bd:69:7d:59:02:3e:d5:52:7a:39:f9:8f"
       - run:
           command: |
-            sudo npm install -g gh-pages
-            git config user.email "ci-build@blog.net"
-            git config user.name "ci-build"
             pwd
       - run:
           command: |
             cd packages/front/gatsby-blog
             git init
+            git config user.email "ci-build@blog.net"
+            git config user.name "ci-build"
             git commit -m "Release based on build ${CIRCLE_BUILD_NUM}"
             git push -f git@github.com:bdeglane/blog.git master:gh-pages
       # - run: sudo gh-pages -m "Page release ${CIRCLE_BUILD_NUM} from ${CIRCLE_BRANCH}" -d packages/front/public
