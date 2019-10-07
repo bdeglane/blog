@@ -73,6 +73,7 @@ jobs:
             git init
             git config user.email "ci-build@blog.net"
             git config user.name "ci-build"
+            git add .
             git commit -m "Release based on build ${CIRCLE_BUILD_NUM}"
             git push -f git@github.com:bdeglane/blog.git master:gh-pages
       # - run: sudo gh-pages -m "Page release ${CIRCLE_BUILD_NUM} from ${CIRCLE_BRANCH}" -d packages/front/public
