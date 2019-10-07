@@ -69,12 +69,14 @@ jobs:
             sudo npm install -g gh-pages
             git config user.email "ci-build@blog.net"
             git config user.name "ci-build"
+            pwd
       - run:
           command: |
-            git add packages/front/gatsby-blog
+            cd packages/front/gatsby-blog
+            git init
             git commit -m "Release based on build ${CIRCLE_BUILD_NUM}"
-            git subtree push --prefix packages/front/gatsby-blog origin gh-pages --force
-      - run: sudo gh-pages -m "Page release ${CIRCLE_BUILD_NUM} from ${CIRCLE_BRANCH}" -d packages/front/public
+            git push -f git@github.com:bdeglane/blog.git master:gh-pages
+      # - run: sudo gh-pages -m "Page release ${CIRCLE_BUILD_NUM} from ${CIRCLE_BRANCH}" -d packages/front/public
 
 workflows:
   version: 2
