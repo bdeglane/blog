@@ -68,7 +68,7 @@ jobs:
       - run: yarn build
       - add_ssh_keys:
           fingerprints:
-            - ${FINGER}
+            - "${FINGER}"
       - run:
           command: |
             git tag -a "release_${CIRCLE_BRANCH}_${CIRCLE_BUILD_NUM}" -m "Release based on build ${CIRCLE_BUILD_NUM}"
