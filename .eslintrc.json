@@ -19,6 +19,8 @@
     "react/jsx-curly-spacing": ["error", { "when": "never", "children": true, "allowMultiline": false }],
     "react/jsx-first-prop-new-line": ["error", "multiline"],
     "react/jsx-max-props-per-line": ["error", { "when": "multiline" }],
-    "react/jsx-wrap-multilines": ["error", { "logical": "parens", "condition": "parens" }]
+    "react/jsx-wrap-multilines": ["error", { "logical": "parens", "condition": "parens" }],
+    "function-paren-newline": "off",
+    "object-curly-newline": "off"
   }
 }
