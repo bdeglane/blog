@@ -1,0 +1,24 @@
+{
+  "extends": "airbnb",
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "rules": {
+    "semi": [
+      2,
+      "never"
+    ],
+    "import/prefer-default-export": "off",
+    "import/no-named-default": "off",
+    "import/no-named-as-default": "off",
+    "import/named": "error",
+    "react/jsx-curly-spacing": ["error", { "when": "never", "children": true, "allowMultiline": false }],
+    "react/jsx-first-prop-new-line": ["error", "multiline"],
+    "react/jsx-max-props-per-line": ["error", { "when": "multiline" }],
+    "react/jsx-wrap-multilines": ["error", { "logical": "parens", "condition": "parens" }]
+  }
+}
