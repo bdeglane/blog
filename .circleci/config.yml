@@ -81,14 +81,14 @@ workflows:
   version: 2
   blog_workflows:
     jobs:
-      - install:
-      # - lint:
-      #    requires:
-      #       - install
-          filters:
-            branches:
-              ignore:
-                - gh-pages
+      - install
+      - lint:
+         requires:
+            - install
+         filters:
+           branches:
+             ignore:
+               - gh-pages
       - build:
           requires:
             - install
@@ -107,5 +107,5 @@ workflows:
             - install
             - build
             # - test
-            # - lint
+            - lint
             # - stylelint

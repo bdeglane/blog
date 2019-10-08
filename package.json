@@ -5,7 +5,7 @@
   "license": "MIT",
   "scripts": {
     "start": "yarn workspaces run develop",
-    "lint": "yarn workspaces run lint",
+    "lint": "eslint \"packages/**/src/**/*.{js,jsx,ts,tsx}\"",
     "build": "yarn workspaces run build",
     "build:ci": "yarn workspaces run build:ci"
   },
@@ -14,5 +14,13 @@
     "packages": [
       "packages/**"
     ]
+  },
+  "devDependencies": {
+    "eslint": "^5.15.2",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.14.3",
+    "eslint-plugin-react-hooks": "^1.7.0"
   }
 }
