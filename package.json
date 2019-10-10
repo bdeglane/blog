@@ -1,8 +1,8 @@
 {
   "name": "blog",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "main": "index.js",
-  "license": "MIT",
+  "license": "MPL-2.0",
   "scripts": {
     "start": "yarn workspaces run develop",
     "lint": "eslint \"packages/**/src/**/*.{js,jsx,ts,tsx}\"",
