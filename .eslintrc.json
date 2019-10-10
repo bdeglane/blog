@@ -22,6 +22,11 @@
     "react/jsx-wrap-multilines": ["error", { "logical": "parens", "condition": "parens" }],
     "function-paren-newline": "off",
     "object-curly-newline": "off",
-    "react/jsx-fragments": ["error", "element"]
+    "react/jsx-fragments": ["error", "element"],
+    "no-use-before-define": ["error", { "functions": false }],
+    "arrow-parens": ["error", "as-needed"],
+    "react/jsx-props-no-spreading": [{
+      "custom": "ignore"
+    }]
   }
 }
