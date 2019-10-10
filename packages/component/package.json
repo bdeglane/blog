@@ -1,0 +1,10 @@
+{
+  "name": "@bd/component",
+  "version": "0.1.0",
+  "description": "A simple components library",
+  "main": "index.js",
+  "repository": "https://github.com/bdeglane/blog",
+  "author": "bdecline <bdeglane@users.noreply.github.com>",
+  "license": "MPL-2.0",
+  "private": true
+}
