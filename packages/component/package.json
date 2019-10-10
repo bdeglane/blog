@@ -9,6 +9,7 @@
   "private": true,
   "scripts": {
     "build": "echo dummy build @bd/component && exit 0",
-    "build:ci": "echo dummy build:ci @bd/component && exit 0"
+    "build:ci": "echo dummy build:ci @bd/component && exit 0",
+    "develop": "echo dummy develop @bd/component && exit 0"
   }
 }
