@@ -6,5 +6,9 @@
   "repository": "https://github.com/bdeglane/blog",
   "author": "bdecline <bdeglane@users.noreply.github.com>",
   "license": "MPL-2.0",
-  "private": true
+  "private": true,
+  "scripts": {
+    "build": "echo dummy build @bd/component && exit 0",
+    "build:ci": "echo dummy build:ci @bd/component && exit 0"
+  }
 }
