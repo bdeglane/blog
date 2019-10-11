@@ -1,11 +1,12 @@
 {
   "name": "blog",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "main": "index.js",
-  "license": "MIT",
+  "license": "MPL-2.0",
   "scripts": {
     "start": "yarn workspaces run develop",
     "lint": "eslint \"packages/**/src/**/*.{js,jsx,ts,tsx}\"",
+    "stylelint": "stylelint \"packages/**/src/**/*.module.css\"",
     "build": "yarn workspaces run build",
     "build:ci": "yarn workspaces run build:ci"
   },
@@ -21,6 +22,8 @@
     "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.14.3",
-    "eslint-plugin-react-hooks": "^1.7.0"
+    "eslint-plugin-react-hooks": "^1.7.0",
+    "stylelint": "^11.1.1",
+    "stylelint-config-standard": "^19.0.0"
   }
 }

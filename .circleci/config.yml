@@ -34,6 +34,20 @@ jobs:
           key: yarn-packages-{{ checksum "yarn.lock" }}
       - run: yarn lint
 
+  stylelint:
+    executor: node_exec
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - yarn-packages-{{ checksum "yarn.lock" }}
+      - run: yarn install --frozen-lockfile
+      - save_cache:
+          paths:
+            - ~/.cache/yarn
+          key: yarn-packages-{{ checksum "yarn.lock" }}
+      - run: yarn stylelint
+
   build:
     executor: node_exec
     steps:
@@ -85,27 +99,20 @@ workflows:
       - lint:
          requires:
             - install
-         filters:
-           branches:
-             ignore:
-               - gh-pages
+      - stylelint:
+         requires:
+            - install
       - build:
           requires:
             - install
-          filters:
-            branches:
-              ignore:
-                - gh-pages
       - deploy:
           filters:
             branches:
               only:
                 - master
-              ignore:
-                - gh-pages
           requires:
             - install
             - build
             # - test
             - lint
-            # - stylelint
+            - stylelint
