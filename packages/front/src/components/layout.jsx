@@ -7,10 +7,12 @@
 
 import React, { Fragment } from 'react'
 import PropTypes from 'prop-types'
-import { useStaticQuery, graphql } from 'gatsby'
+import { useStaticQuery, graphql, Link } from 'gatsby'
+import { Header } from '@bd/component'
 
-import { Header } from './header'
 import './layout.css'
+
+
 
 export function Layout({ children }) {
   const data = useStaticQuery(graphql`
@@ -25,7 +27,18 @@ export function Layout({ children }) {
 
   return (
     <Fragment>
-      <Header siteTitle={data.site.siteMetadata.title} />
+      <Header>
+        <Link
+          to="/"
+          style={{
+            color: 'white',
+            textDecoration: 'none',
+          }}
+        >
+          {data.site.siteMetadata.title}
+        </Link>
+      </Header>
+
       <div
         style={{
           margin: '0 auto',
