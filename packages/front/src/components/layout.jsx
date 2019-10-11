@@ -13,7 +13,6 @@ import { Header } from '@bd/component'
 import './layout.css'
 
 
-
 export function Layout({ children }) {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
