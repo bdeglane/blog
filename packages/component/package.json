@@ -7,11 +7,6 @@
   "author": "bdecline <bdeglane@users.noreply.github.com>",
   "license": "MPL-2.0",
   "private": true,
-  "scripts": {
-    "build": "echo dummy build @bd/component && exit 0",
-    "build:ci": "echo dummy build:ci @bd/component && exit 0",
-    "develop": "echo dummy develop @bd/component && exit 0"
-  },
   "dependencies": {
     "prop-types": "^15.7.2",
     "react": "^16.10.2"
