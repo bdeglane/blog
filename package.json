@@ -7,6 +7,7 @@
     "start": "lerna run --stream  develop",
     "build": "lerna run  --stream build",
     "build:ci": "lerna run  --stream build:ci",
+    "storybook": "lerna run  --stream storybook",
     "lint": "eslint \"packages/**/src/**/*.{js,jsx,ts,tsx}\"",
     "stylelint": "stylelint \"packages/**/src/**/*.module.css\""
   },
