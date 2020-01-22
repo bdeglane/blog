@@ -6,6 +6,7 @@
   "author": "bdecline <bdeglane@users.noreply.github.com>",
   "dependencies": {
     "@bd/component": "0.1.0",
+    "@experiment/grid": "0.1.0",
     "@reach/router": "^1.2.1",
     "gatsby": "^2.15.29",
     "gatsby-image": "^2.2.24",

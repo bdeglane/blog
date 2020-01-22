@@ -1,11 +1,15 @@
-import React, { Fragment } from 'react'
-import { Head } from '../components/head'
+import React from 'react'
+import { Router } from '@reach/router'
+import { GridExperimentPage } from '@experiment/grid'
+import { Layout } from '../components/layout'
+
 
 export default function () {
   return (
-    <Fragment>
-      <Head />
-      <h1>SPA ROUTER</h1>
-    </Fragment>
+    <Layout>
+      <Router>
+        <GridExperimentPage path="/app/test" />
+      </Router>
+    </Layout>
   )
 }
