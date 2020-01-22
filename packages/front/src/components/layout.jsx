@@ -1,16 +1,9 @@
-/**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.org/docs/use-static-query/
- */
-
-import React, { Fragment } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 import { useStaticQuery, graphql, Link } from 'gatsby'
-import { Header } from '@bd/component'
+import { Body, Header } from '@bd/components'
 
-import './layout.css'
+import styles from './layout.module.css'
 
 
 export function Layout({ children }) {
@@ -25,38 +18,26 @@ export function Layout({ children }) {
   `)
 
   return (
-    <Fragment>
-      <Header>
-        <Link
-          to="/"
-          style={{
-            color: 'white',
-            textDecoration: 'none',
-          }}
-        >
+    <section className={styles.layout}>
+      <Header className={styles.layout__header}>
+        <Link to="/">
           {data.site.siteMetadata.title}
         </Link>
       </Header>
 
-      <div
-        style={{
-          margin: '0 auto',
-          maxWidth: 960,
-          padding: '0px 1.0875rem 1.45rem',
-          paddingTop: 0,
-        }}
-      >
+      <Body className={styles.layout__body}>
         <main>{children}</main>
-        <footer>
-          ©
-          {' '}
-          {new Date().getFullYear()}
-          , Built with
+      </Body>
 
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
-      </div>
-    </Fragment>
+      <footer className={styles.layout__footer}>
+        ©
+        {' '}
+        {new Date().getFullYear()}
+        , Built with
+        {' '}
+        <a href="https://www.gatsbyjs.org">Gatsby</a>
+      </footer>
+    </section>
   )
 }
 

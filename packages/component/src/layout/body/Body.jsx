@@ -2,22 +2,22 @@ import React from 'react'
 import { node, string } from 'prop-types'
 import cx from 'classnames'
 
-import styles from './header.module.css'
+import styles from './Body.module.css'
 
-Header.propTypes = {
+Body.propTypes = {
   children: node,
   className: string,
 }
 
-Header.defaultProps = {
+Body.defaultProps = {
   children: null,
   className: '',
 }
 
-export function Header({ children, className }) {
+export function Body({ children, className }) {
   return (
-    <header className={cx(styles.header, className)}>
+    <section className={cx(styles.body, className)}>
       {children}
-    </header>
+    </section>
   )
 }
