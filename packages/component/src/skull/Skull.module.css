@@ -1,11 +1,15 @@
-.logo {
-  width: 15rem;
+.skull {
+  width: 5rem;
   height: auto;
 }
 
-.logo__path {
-  fill: #e9e9e9;
+.skull__path {
+  fill: var(--white);
   fill-opacity: 1;
   fill-rule: nonzero;
   stroke: none
+}
+
+.skull__pathDark {
+  fill: var(--dark-grey)
 }
