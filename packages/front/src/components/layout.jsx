@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { useStaticQuery, graphql, Link } from 'gatsby'
-import { Body, Header } from '@bd/components'
+import { Body, Header, BDLogo } from '@bd/components'
 
 import styles from './layout.module.css'
 
@@ -21,7 +21,7 @@ export function Layout({ children }) {
     <section className={styles.layout}>
       <Header className={styles.layout__header}>
         <Link to="/">
-          {data.site.siteMetadata.title}
+          <BDLogo className={styles.layout__headerLogo} title={data.site.siteMetadata.title} skull />
         </Link>
       </Header>
 

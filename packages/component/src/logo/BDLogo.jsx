@@ -5,6 +5,7 @@ import { bool, string } from 'prop-types'
 import styles from './BDLogo.module.css'
 
 BDLogo.propTypes = {
+  title: string.isRequired,
   className: string,
   pathClassName: string,
   dark: bool,
@@ -20,7 +21,7 @@ BDLogo.defaultProps = {
   skull: false,
 }
 
-export function BDLogo({ className, pathClassName, dark, tail, skull }) {
+export function BDLogo({ className, pathClassName, dark, tail, skull, title }) {
   const pathClassNames = cx(styles.logo__path, { [styles.logo__pathDark]: dark }, pathClassName)
 
   return (
@@ -28,8 +29,9 @@ export function BDLogo({ className, pathClassName, dark, tail, skull }) {
       <svg
         width="100%"
         height="100%"
-        viewBox="0 0 39.687499 31.750001"
+        viewBox={tail ? '0 0 40 31' : '0 0 40 21'}
       >
+        <title>{title}</title>
         <g transform="translate(0,-265.24998)">
           <g transform="matrix(0.57424869,0,0,-0.55237599,18.247608,277.13672)">
             <path
