@@ -1,0 +1,15 @@
+.skull {
+  width: 5rem;
+  height: auto;
+}
+
+.skull__path {
+  fill: var(--white);
+  fill-opacity: 1;
+  fill-rule: nonzero;
+  stroke: none;
+}
+
+.skull__pathDark {
+  fill: var(--dark-grey);
+}

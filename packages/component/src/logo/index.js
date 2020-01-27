@@ -1,0 +1,1 @@
+export { BDLogo } from './BDLogo'

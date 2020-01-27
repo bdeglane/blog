@@ -1,0 +1,15 @@
+.logo {
+  width: 15rem;
+  height: auto;
+}
+
+.logo__path {
+  fill: var(--white);
+  fill-opacity: 1;
+  fill-rule: nonzero;
+  stroke: none;
+}
+
+.logo__pathDark {
+  fill: var(--dark-grey);
+}
