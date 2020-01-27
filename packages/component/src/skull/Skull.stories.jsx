@@ -5,4 +5,4 @@ export default { title: 'Skull' }
 
 export const basic = () => <Skull />
 
-export const dark = () => <Skull dark/>
+export const dark = () => <Skull dark />

@@ -7,9 +7,9 @@
   fill: var(--white);
   fill-opacity: 1;
   fill-rule: nonzero;
-  stroke: none
+  stroke: none;
 }
 
 .skull__pathDark {
-  fill: var(--dark-grey)
+  fill: var(--dark-grey);
 }

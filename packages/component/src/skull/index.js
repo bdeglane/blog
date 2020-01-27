@@ -1,1 +1,1 @@
-export { BDLogo } from './BDLogo'
+export { Skull } from './Skull'
