@@ -1,8 +1,30 @@
 :root {
   --white: #fefefe;
-  --dark: 999;
+  --dark: #232323;
   --pink: #fc85ae;
   --purple: #9e579d;
   --eggplant: #574b90;
   --dark-grey: #303a52;
+
+  --purple-gradient: linear-gradient(45deg, #574b90 25%, #9e579d 100%);
+
+  --purple-shadow: 0 .5rem .8rem .7rem var(--eggplant);
+  --grey-shadow:
+          0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+          0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+          0 12.5px 10px rgba(0, 0, 0, 0.06),
+          0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+          0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+          0 100px 80px rgba(0, 0, 0, 0.12);
+}
+
+
+html {
+  font-size: 37.5%; /* 16px * 37.5% = 6px */
+}
+
+@media (--desktop) {
+  html {
+    font-size: 62.5%; /* 16px * 62.5% = 10px */
+  }
 }
