@@ -35,5 +35,17 @@ module.exports = {
       resolve: 'gatsby-plugin-create-client-paths',
       options: { prefixes: ['/app/*'] },
     },
+    {
+      resolve: 'gatsby-plugin-postcss',
+      options: {
+        // eslint-disable-next-line global-require, import/no-extraneous-dependencies
+        postCssPlugins: [require('postcss-preset-env')(
+          {
+            stage: 3,
+            importFrom: 'custom-media-definition.css',
+            features: { 'custom-media-queries': true },
+          })],
+      },
+    },
   ],
 }
