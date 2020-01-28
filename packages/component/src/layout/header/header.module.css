@@ -1,3 +1,14 @@
 .header {
-  background-color: var(--eggplant);
+  background: var(--purple-gradient);
+  box-shadow: var(--grey-shadow);
+  height: 14rem;
+  display: flex;
+  justify-content: center;
+  z-index: 5;
+}
+
+@media (--desktop) {
+  .header {
+    height: 10rem;
+  }
 }

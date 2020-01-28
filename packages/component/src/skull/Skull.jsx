@@ -24,7 +24,7 @@ export function Skull({ className, pathClassName, dark }) {
         height="100%"
         viewBox="0 0 10 10"
       >
-        <g transform="translate(-4.5,-275)">
+        <g transform="translate(-4.5,-274.5)">
           <g transform="matrix(0.79379206,0,0,-0.76355711,12.707156,279.46621)">
             <path
               className={cx(styles.skull__path, {

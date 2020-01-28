@@ -5,8 +5,13 @@
   flex-direction: column;
 }
 
-.layout__header {
-  height: 75px;
+.layout__header-logo {
+  height: 100%;
+  width: 20rem;
+}
+
+.layout__header-logo-path {
+  box-shadow: var(--grey-shadow);
 }
 
 .layout__body {
@@ -14,5 +19,27 @@
 }
 
 .layout__footer {
-  height: 75px;
+  background: var(--dark);
+  height: 10rem;
+  display: flex;
+  justify-content: center;
+}
+
+.layout__footer-logo {
+  height: 100%;
+  width: 15rem;
+}
+
+@media (--desktop) {
+  .layout__header-logo {
+    width: 15rem;
+  }
+
+  .layout__footer {
+    height: 7rem;
+  }
+
+  .layout__footer-logo {
+    width: 10rem;
+  }
 }

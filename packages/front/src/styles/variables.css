@@ -17,14 +17,3 @@
           0 41.8px 33.4px rgba(0, 0, 0, 0.086),
           0 100px 80px rgba(0, 0, 0, 0.12);
 }
-
-
-html {
-  font-size: 37.5%; /* 16px * 37.5% = 6px */
-}
-
-@media (--desktop) {
-  html {
-    font-size: 62.5%; /* 16px * 62.5% = 10px */
-  }
-}
