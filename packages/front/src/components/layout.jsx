@@ -1,7 +1,7 @@
 import React from 'react'
-import PropTypes from 'prop-types'
+import { node } from 'prop-types'
 import { useStaticQuery, graphql, Link } from 'gatsby'
-import { Body, Header, BDLogo } from '@bd/components'
+import { Body, Header, BDLogo, Skull } from '@bd/components'
 
 import styles from './layout.module.css'
 
@@ -19,9 +19,14 @@ export function Layout({ children }) {
 
   return (
     <section className={styles.layout}>
-      <Header className={styles.layout__header}>
+      <Header>
         <Link to="/">
-          <BDLogo className={styles.layout__headerLogo} title={data.site.siteMetadata.title} skull />
+          <BDLogo
+            className={styles.layout__headerLogo}
+            pathClassName={styles.layout__headerLogoPath}
+            title={data.site.siteMetadata.title}
+            skull
+          />
         </Link>
       </Header>
 
@@ -30,17 +35,14 @@ export function Layout({ children }) {
       </Body>
 
       <footer className={styles.layout__footer}>
-        ©
-        {' '}
-        {new Date().getFullYear()}
-        , Built with
-        {' '}
-        <a href="https://www.gatsbyjs.org">Gatsby</a>
+        <Link to="/" title="to home page">
+          <Skull dark className={styles.layout__footerLogo} />
+        </Link>
       </footer>
     </section>
   )
 }
 
 Layout.propTypes = {
-  children: PropTypes.node.isRequired,
+  children: node.isRequired,
 }
