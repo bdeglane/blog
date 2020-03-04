@@ -24,7 +24,7 @@ jobs:
       - run: yarn install --immutable
       - save_cache:
           paths:
-            - ~/.yarn/cache
+            - ~/.yarn-cache
           key: yarn-packages-{{ checksum "yarn.lock" }}
 
   lint:
@@ -37,7 +37,7 @@ jobs:
       - run: yarn install --immutable
       - save_cache:
           paths:
-            - ~/.yarn/cache
+            - ~/.yarn-cache
           key: yarn-packages-{{ checksum "yarn.lock" }}
       - run: yarn lint
 
@@ -51,7 +51,7 @@ jobs:
       - run: yarn install --immutable
       - save_cache:
           paths:
-            - ~/.yarn/cache
+            - ~/.yarn-cache
           key: yarn-packages-{{ checksum "yarn.lock" }}
       - run: yarn stylelint
 
@@ -65,7 +65,7 @@ jobs:
       - run: yarn install --immutable
       - save_cache:
           paths:
-            - ~/.yarn/cache
+            - ~/.yarn-cache
           key: yarn-packages-{{ checksum "yarn.lock" }}
       - run: yarn build
 
@@ -79,7 +79,7 @@ jobs:
       - run: yarn install --immutable
       - save_cache:
           paths:
-            - ~/.yarn/cache
+            - ~/.yarn-cache
           key: yarn-packages-{{ checksum "yarn.lock" }}
       - run: yarn build:ci
       - add_ssh_keys:
