@@ -92,3 +92,7 @@ typings/
 .idea/
 
 gatsby-blog/
+
+.yarn/cache
+.yarn/plugins
+.yarn/unplugged
