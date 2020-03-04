@@ -15,6 +15,7 @@ jobs:
           command: |
             pwd
             ls -la
+            yarn --version
       - restore_cache:
           keys:
             - yarn-packages-{{ checksum "yarn.lock" }}
