@@ -11,6 +11,10 @@ jobs:
     executor: node_exec
     steps:
       - checkout
+      - run:
+          command: |
+            pwd
+            ls -la
       - restore_cache:
           keys:
             - yarn-packages-{{ checksum "yarn.lock" }}
