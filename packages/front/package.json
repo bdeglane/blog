@@ -36,7 +36,7 @@
   "license": "MPL-2.0",
   "scripts": {
     "build": "gatsby build",
-    "build:ci": "gatsby build --prefix-paths && postbuild:ci",
+    "build:ci": "gatsby build --prefix-paths && yarn postbuild:ci",
     "postbuild:ci": "mv public gatsby-blog",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
