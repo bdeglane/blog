@@ -11,20 +11,13 @@ jobs:
     executor: node_exec
     steps:
       - checkout
-      - run:
-          command: |
-            pwd
-            ls -la
-            ls -la .yarn/
-            ls -la .yarn/releases
-            yarn --version
       - restore_cache:
           keys:
             - yarn-packages-{{ checksum "yarn.lock" }}
       - run: yarn install --immutable
       - save_cache:
           paths:
-            - ~/.yarn-cache
+            - ~/.yarn/cache
           key: yarn-packages-{{ checksum "yarn.lock" }}
 
   lint:
