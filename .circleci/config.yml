@@ -17,7 +17,7 @@ jobs:
       - run: yarn install --immutable
       - save_cache:
           paths:
-            - ~/.yarn/cache
+            - ~/.yarn-cache
           key: yarn-packages-{{ checksum "yarn.lock" }}
 
   lint:
