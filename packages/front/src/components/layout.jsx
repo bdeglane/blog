@@ -5,7 +5,6 @@ import { Body, Header, BDLogo, Skull } from '@bd/components'
 
 import styles from './layout.module.css'
 
-
 export function Layout({ children }) {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
