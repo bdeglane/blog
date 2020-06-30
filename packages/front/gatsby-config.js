@@ -1,9 +1,21 @@
 module.exports = {
-  pathPrefix: '/blog',
+  pathPrefix: '/personal',
   siteMetadata: {
-    title: 'B. Decline Blog',
-    description: 'A Simple blog',
-    author: '@BenoitDecline',
+    title: 'B. Deglane',
+    description: 'My Simple CV / blog',
+    author: 'Benoît Deglane',
+    siteUrl: 'https://bdeglane.github.io',
+    // Used for resolving images in social cards
+    social: [
+      {
+        name: 'Twitter',
+        url: 'https://twitter.com/BenoitDecline',
+      },
+      {
+        name: 'GitHub',
+        url: 'https://github.com/bdeglane',
+      },
+    ],
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -12,6 +24,13 @@ module.exports = {
       options: {
         name: 'images',
         path: `${__dirname}/src/images`,
+      },
+    },
+    {
+      resolve: 'gatsby-theme-blog',
+      options: {
+        // basePath defaults to `/`
+        basePath: '/blog',
       },
     },
     'gatsby-transformer-sharp',

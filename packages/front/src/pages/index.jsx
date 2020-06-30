@@ -3,11 +3,11 @@ import { Link } from 'gatsby'
 
 import { Layout } from '../components/layout'
 import { Image } from '../components/image'
-import { SEO } from '../components/seo'
+import { Head } from '../components/head'
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="Home" />
+    <Head title="Home" />
     <h1>Hi people</h1>
     <p>Now go gh-pages with auto deploy</p>
     <p>Welcome to your new Gatsby site.</p>
@@ -16,6 +16,7 @@ const IndexPage = () => (
       <Image />
     </div>
     <Link to="/page-2/">Go to page 2</Link>
+    <Link to="/blog/">Go to blog</Link>
   </Layout>
 )
 
