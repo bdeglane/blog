@@ -1,7 +1,7 @@
 module.exports = {
   pathPrefix: '/blog',
   siteMetadata: {
-    title: 'B. Deglane',
+    title: 'My Simple CV / blog',
     description: 'My Simple CV / blog',
     author: 'Benoît Deglane',
     siteUrl: 'https://bdeglane.github.io',
@@ -26,13 +26,6 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
-    {
-      resolve: 'gatsby-theme-blog',
-      options: {
-        // basePath defaults to `/`
-        basePath: '/posts',
-      },
-    },
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
     {
@@ -53,6 +46,13 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-create-client-paths',
       options: { prefixes: ['/app/*'] },
+    },
+    {
+      resolve: 'gatsby-theme-blog',
+      options: {
+        // basePath defaults to `/`
+        basePath: '/posts',
+      },
     },
     {
       resolve: 'gatsby-plugin-postcss',
