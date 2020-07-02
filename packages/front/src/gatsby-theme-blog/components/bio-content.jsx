@@ -1,19 +1,10 @@
 import React from 'react'
 
-/**
- * Change the content to add your own bio
- */
-
-export default function Bio() {
+export default function Bio({ siteUrl, author, summary }) {
   return (
-    <React.Fragment>
-      This is where
-      {' '}
-      <a href="http://example.com/">your name</a>
-      {' '}
-      goes.
-      <br />
-      Or whatever, you make the rules.
-    </React.Fragment>
+    <>
+      <a href={siteUrl}>{author}</a>
+      <p>{summary}</p>
+    </>
   )
 }

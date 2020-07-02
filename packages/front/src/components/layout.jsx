@@ -32,12 +32,6 @@ export function Layout({ children }) {
       <Body className={styles.layout__body}>
         <main>{children}</main>
       </Body>
-
-      <footer className={styles.layout__footer}>
-        <Link to="/" title="to home page">
-          <Skull dark className={styles.layout__footerLogo} />
-        </Link>
-      </footer>
     </section>
   )
 }
