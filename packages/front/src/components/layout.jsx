@@ -1,7 +1,7 @@
 import React from 'react'
 import { node } from 'prop-types'
 import { useStaticQuery, graphql, Link } from 'gatsby'
-import { Body, Header, BDLogo, Skull } from '@bd/components'
+import { Body, Header, BDLogo } from '@bd/components'
 
 import styles from './layout.module.css'
 
@@ -32,12 +32,6 @@ export function Layout({ children }) {
       <Body className={styles.layout__body}>
         <main>{children}</main>
       </Body>
-
-      <footer className={styles.layout__footer}>
-        <Link to="/" title="to home page">
-          <Skull dark className={styles.layout__footerLogo} />
-        </Link>
-      </footer>
     </section>
   )
 }

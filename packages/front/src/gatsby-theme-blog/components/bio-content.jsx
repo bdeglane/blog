@@ -1,19 +1,17 @@
-import React from 'react'
+import React, { Fragment } from 'react'
+import { string } from 'prop-types'
 
-/**
- * Change the content to add your own bio
- */
+Bio.propTypes = {
+  siteUrl: string.isRequired,
+  author: string.isRequired,
+  summary: string.isRequired,
+}
 
-export default function Bio() {
+export default function Bio({ siteUrl, author, summary }) {
   return (
-    <React.Fragment>
-      This is where
-      {' '}
-      <a href="http://example.com/">your name</a>
-      {' '}
-      goes.
-      <br />
-      Or whatever, you make the rules.
-    </React.Fragment>
+    <Fragment>
+      <a href={siteUrl}>{author}</a>
+      <p>{summary}</p>
+    </Fragment>
   )
 }

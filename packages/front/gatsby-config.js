@@ -4,7 +4,8 @@ module.exports = {
     title: 'My Simple CV / blog',
     description: 'My Simple CV / blog',
     author: 'Benoît Deglane',
-    siteUrl: 'https://bdeglane.github.io',
+    summary: 'Javascript developer at Nantes / Astronaut at Eleven Labs / Co organizer NantesJS',
+    siteUrl: 'https://bdeglane.github.io/blog',
     // Used for resolving images in social cards
     social: [
       {
@@ -52,6 +53,7 @@ module.exports = {
       options: {
         // basePath defaults to `/`
         basePath: '/posts',
+        disableThemeUiStyling: true,
       },
     },
     {
