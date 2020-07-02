@@ -1,33 +1,31 @@
 import React from 'react'
-
 import { MDXRenderer } from 'gatsby-plugin-mdx'
-import { Layout } from '../../components/layout'
-import { Head } from '../../components/head'
 import PostHero from 'gatsby-theme-blog/src/components/post-hero'
 import PostTitle from 'gatsby-theme-blog/src/components/post-title'
 import PostDate from 'gatsby-theme-blog/src/components/post-date'
 import PostFooter from 'gatsby-theme-blog/src/components/post-footer'
+import { Layout } from '../../components/layout'
+import { Head } from '../../components/head'
 
+/* eslint-disable react/prop-types */
 const Post = ({
-                data: {
-                  post,
-                  site: {
-                    siteMetadata: { title },
-                  },
-                },
-                location,
-                previous,
-                next,
-              }) => (
+  data: {
+    post,
+    site: {
+      siteMetadata: { title },
+    },
+  },
+  location, // eslint-disable-line
+  previous,
+  next,
+}) => (
   <Layout title={title}>
     <Head
       title={post.title}
       description={post.excerpt}
-      imageSource={
-        post.socialImage
-          ? post.socialImage?.childImageSharp?.fluid.src
-          : post.image?.childImageSharp?.fluid.src
-      }
+      imageSource={post.socialImage
+        ? post.socialImage?.childImageSharp?.fluid.src
+        : post.image?.childImageSharp?.fluid.src}
       keywords={post.keywords}
       imageAlt={post.imageAlt}
     />

@@ -8,8 +8,11 @@
 import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import Image from 'gatsby-image'
+// eslint-disable-next-line import/no-extraneous-dependencies
 import { Styled, css, Flex } from 'theme-ui'
 import BioContent from './bio-content'
+
+const Div = Styled.div
 
 const Bio = () => {
   const data = useStaticQuery(graphql`
@@ -38,7 +41,7 @@ const Bio = () => {
   } = data
 
   return (
-    <Flex css={css({ mb: 4, alignItems: `center` })}>
+    <Flex css={css({ mb: 4, alignItems: 'center' })}>
       {avatar ? (
         <Image
           fixed={avatar.childImageSharp.fixed}
@@ -63,9 +66,9 @@ const Bio = () => {
           role="presentation"
         />
       )}
-      <Styled.div>
+      <Div>
         <BioContent siteUrl={siteUrl} author={author} summary={summary} />
-      </Styled.div>
+      </Div>
     </Flex>
   )
 }

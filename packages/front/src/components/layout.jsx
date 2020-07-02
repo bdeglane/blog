@@ -1,7 +1,7 @@
 import React from 'react'
 import { node } from 'prop-types'
 import { useStaticQuery, graphql, Link } from 'gatsby'
-import { Body, Header, BDLogo, Skull } from '@bd/components'
+import { Body, Header, BDLogo } from '@bd/components'
 
 import styles from './layout.module.css'
 
