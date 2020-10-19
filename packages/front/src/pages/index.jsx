@@ -2,18 +2,23 @@ import React from 'react'
 import { Link } from 'gatsby'
 
 import { Layout } from '../components/layout'
-import { Image } from '../components/image'
 import { Head } from '../components/head'
 
+import styles from './index.module.css'
+
 const IndexPage = () => (
-  <Layout>
+  <Layout gradient>
     <Head title="Home" />
     <h1>Hi people</h1>
     <p>Now go gh-pages with auto deploy</p>
     <p>Welcome to your new Gatsby site.</p>
     <p>Now go build something great.</p>
-    <div style={{ maxWidth: '300px', marginBottom: '1.45rem' }}>
-      <Image />
+    <div className={styles.index__logos}>
+        <img src="/javascript.svg" alt="javascript logo" />
+        <img src="/nodejs.svg" alt="nodejs logo" />
+        <img src="/react.svg" alt="react logo" />
+        <img src="/angular.svg" alt="angular logo" />
+        <img src="/graphql.svg" alt="graphql logo" />
     </div>
     <Link to="/page-2/">Go to page 2</Link>
     <Link to="/posts/">Go to blog</Link>
