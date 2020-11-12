@@ -3,11 +3,18 @@
   height: 100vh;
   display: flex;
   flex-direction: column;
+  background: var(--dark-grey);
+}
+
+.layout--gradient {
+  background: linear-gradient(-75deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 60s ease infinite;
 }
 
 .layout__header-logo {
-  height: 100%;
-  width: 20rem;
+  margin: 4rem;
+  width: 25rem;
 }
 
 .layout__header-logo-path {
@@ -32,7 +39,7 @@
 
 @media (--desktop) {
   .layout__header-logo {
-    width: 15rem;
+    width: 25rem;
   }
 
   .layout__footer {
@@ -43,3 +50,16 @@
     width: 10rem;
   }
 }
+
+@keyframes gradient {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
+}
+

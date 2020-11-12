@@ -1,0 +1,6 @@
+.index__logos {
+  display: flex;
+  height: 10rem;
+  padding: 4rem;
+  justify-content: space-around;
+}

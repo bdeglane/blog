@@ -1,10 +1,13 @@
 .header {
+  height: auto;
+  display: flex;
+  justify-content: flex-start;
+  z-index: 5;
+}
+
+.header--background {
   background: var(--purple-gradient);
   box-shadow: var(--grey-shadow);
-  height: 14rem;
-  display: flex;
-  justify-content: center;
-  z-index: 5;
 }
 
 @media (--desktop) {
